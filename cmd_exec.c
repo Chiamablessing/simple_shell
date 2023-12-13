@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * colon_cdir -  function that checks if the current character is a colon in the given path
+ * colon_cdir -  function that checks if the current character
+ * is a colon in the given path.
  * @path: a pointer to a character array representing the path.
  * @i: a pointer to an integer representing the current index in the path.
  * Return: 1 if the path is searchable in the cd, 0 otherwise.
