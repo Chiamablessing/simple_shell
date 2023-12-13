@@ -83,7 +83,13 @@ hsh main.c shell.c
 
 The output after the program is executed should look something like this:
 
-> $ ./hsh ($) /bin/ls hsh main.c shell.c ($) ($) exit $
+> $ ./hsh
+> ($)
+> /bin/ls
+> hsh main.c shell.c
+> ($)
+> ($) exit
+> $
 
 ## Interactive Mode (Version 0.0.0)
 
@@ -124,7 +130,7 @@ The output after the program is executed should look something like this:
 
 **InteractIive Mode (Version 1.0.0)**
 
-* Implement the setenv and unsetenv built-in commands. setenv initializes a new environment variable, or modify an existing one and should print something on stderr on failure **(Comm and syntax: setenv VARIABLE VALUE)**. unsetenv remove an environment variable and should print something on stderr on failure **(Command syntax: unsetenv VARIABLE)**.
+* Implement the setenv and unsetenv built-in commands. setenv initializes a new environment variable, or modify an existing one and should print something on stderr on failure (**Comm and syntax**: setenv VARIABLE VALUE). unsetenv remove an environment variable and should print something on stderr on failure **(Command syntax: unsetenv VARIABLE)**.
 
 * Implement the built-in command cd (Command syntax: _cd DIRECTORY_). cd changes the current directory of the process. If no argument is given to cd, the command must be interpreted like cd $HOME and handle te command cd -. Remember to update the environment variable PWD when you change directory
 
@@ -149,7 +155,7 @@ The output after the program is executed should look something like this:
 Example
 
 > $ echo "echo 'hello' #this will be ignored!" | ./hsh
-'hello'
+> 'hello'
 
 * In non-interactive mode, the Simple Shell accepts a file as a command line argument. To use this mode, execute: • Your shell can take a file as a command line argument (Usage: simple_shell _[filename]_)
 
