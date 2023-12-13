@@ -184,7 +184,7 @@ or either of the above searches was successful, the shell executes the named pro
 
 ## Author
 
-* Chiamaka Emeti || **[Github](https://www.github.com/chiamablessing)** | [Twitter](https://www.twitter.com/Tech_by_chammy) | [email](https://www.gmail.com/chiamakaemeti)
+* Chiamaka Emeti || **[Github](https://www.github.com/chiamablessing)** | [Twitter](https://www.twitter.com/Icehub_techster) | [email](https://www.gmail.com/chiamakaemeti)
 
 ## Acknowledgements 🙏
 
