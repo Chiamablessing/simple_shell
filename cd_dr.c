@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * cd_dr - function that changes current directory
+ * cd_dr - function that changes the current directory
  *
  * @datast: data relevant
  * Return: 1 on success
