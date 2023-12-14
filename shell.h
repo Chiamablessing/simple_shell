@@ -88,12 +88,12 @@ typedef struct r_var_list
 /**
  * struct builtin_s - Builtin struct for command args.
  * @name: The name of the command builtin i.e cd, exit, env
- * @f: data type pointer function.
+ * @p: data type pointer function.
  */
 typedef struct builtin_s
 {
 	char *name;
-	int (*f)(data_shell *datast);
+	int (*p)(data_shell *datast);
 } builtin_t;
 
 /* cham_lists.c */

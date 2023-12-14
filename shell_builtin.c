@@ -8,20 +8,20 @@ int (*shell_builtin(char *cmd))(data_shell *)
 {
 	builtin_t builtin[] = {
 		{ "env", _env },
-		/* { "exit", exit_shell }, */
+		{ "exit", shell_exit },
 		{ "setenv", _setenv },
 		{ "unsetenv", _unsetenv },
-		/* { "cd", cd_shell }, */
+		 { "cd", cd_dr },
 		{ "help", get_help },
 		{ NULL, NULL }
 	};
-	int i;
+	int j;
 
-	for (i = 0; builtin[i].name; i++)
+	for (j = 0; builtin[j].name; j++)
 	{
-		if (_strcmp(builtin[i].name, cmd) == 0)
+		if (_strcmp(builtin[j].name, cmd) == 0)
 			break;
 	}
 
-	return (builtin[i].f);
+	return (builtin[j].p);
 }
