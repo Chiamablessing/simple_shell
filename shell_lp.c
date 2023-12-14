@@ -22,7 +22,7 @@ char *no_comment(char *in)
 			}
 
 			if (in[i - 1] == ' ' || in[i - 1] == '\t' || in[i - 1] == ';')
-			max = i;
+				max = i;
 		}
 	}
 
@@ -41,10 +41,9 @@ char *no_comment(char *in)
  */
 void shell_lp(data_shell *datast)
 {
-	int loop, i_eof;
+	int loop = 1, i_eof, eval = 0;
 	char *input;
 
-	loop = 1;
 	while (loop == 1)
 	{
 		write(STDIN_FILENO, "$ ", 2);
@@ -58,7 +57,12 @@ void shell_lp(data_shell *datast)
 			input = no_comment(input);
 			if (input == NULL)
 				continue;
-
+			if (_strcmp(input, "exit") == 0)
+			{
+				loop = 0; /*Exit the loop if the user enters "exit"*/
+				free(input);
+				continue;
+			}
 			if (check_parse_error(datast, input) == 1)
 			{
 				datast->status = 2;
@@ -69,6 +73,7 @@ void shell_lp(data_shell *datast)
 			loop = split1_commands(datast, input);
 			datast->counter += 1;
 			free(input);
+			get_error(datast, eval);
 		}
 		else
 		{

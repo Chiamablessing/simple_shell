@@ -9,22 +9,28 @@
  */
 int get_error(data_shell *datast, int eval)
 {
-	char *error;
+	char *error = NULL;
 
+	if (datast == NULL)
+	{
+	return (-1);
+	}
 	switch (eval)
 	{
 	case -1:
 		error = error_env(datast);
 		break;
 	case 126:
-		/* error = error_path_126(datast); */
+		error = error_path(datast);
 		break;
 	case 127:
 		error = error_not_found(datast);
 		break;
 	case 2:
 		if (_strcmp("exit", datast->args[0]) == 0)
+		{
 			error = error_exit_shell(datast);
+		}
 		else if (_strcmp("cd", datast->args[0]) == 0)
 			error = error_get_cd(datast);
 		break;
