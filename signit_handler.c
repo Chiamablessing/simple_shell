@@ -7,5 +7,5 @@
 void sigint_handler(int sig)
 {
 	(void)sig;
-	write(STDOUT_FILENO, "\n$ ", 5);
+	write(STDOUT_FILENO, "\n$ ", 3);
 }

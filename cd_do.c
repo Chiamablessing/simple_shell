@@ -28,14 +28,14 @@ void cd_do(data_shell *datast)
 		return;
 	}
 	cp_strtok_pwd = cp_pwd;
-	/* rev_string(cp_strtok_pwd); */
+	revs_string(cp_strtok_pwd);
 	cp_strtok_pwd = _strtok(cp_strtok_pwd, "/");
 	if (cp_strtok_pwd != NULL)
 	{
 		cp_strtok_pwd = _strtok(NULL, "\0");
 
-		/* if (cp_strtok_pwd != NULL)*/
-		/*rev_string(cp_strtok_pwd); */
+	if (cp_strtok_pwd != NULL)
+		revs_string(cp_strtok_pwd);
 	}
 	if (cp_strtok_pwd != NULL)
 	{
